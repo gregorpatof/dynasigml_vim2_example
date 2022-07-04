@@ -16,6 +16,9 @@ def make_all_jobs(jobs_dir):
         if line.startswith('LOAD_YOUR_MODULES_HERE_IF_NEEDED'):
             raise ValueError('You need to remove the LOAD_YOUR_MODULES_HERE_IF_NEEDED line in slurm_header.txt ' +
                              'and replace it with the commands to load your Python environment, if needed.')
+        if line.startswith('cd /path/to/your/dynasigml_vim2_example/folder'):
+            raise ValueError('You need to change the cd /path/to/your/dynasigml_vim2_example/folder line in ' +
+                             'slurm_header.txt and replace it with the full path to the dynasigml_vim2_example folder.')
         if line.startswith('python run_one_dynasigdf.py'):
             line = 'python run_one_dynasigdf.py'
             newlines.append(line)
