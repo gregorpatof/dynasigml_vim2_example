@@ -2,6 +2,7 @@ from dynasigml.dynasig_df import DynaSigDF
 import sys
 import glob
 import json
+import numpy as np
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
