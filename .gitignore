@@ -1,2 +1,7 @@
 .idea
-
+combined_dsdf.pickle
+dsml_model.pickle
+graphs_folder
+coefficients.pdb
+dsml_dynasig_only.pickle
+graphs_folder_dynasig_only
