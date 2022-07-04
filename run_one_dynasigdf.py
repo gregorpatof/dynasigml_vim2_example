@@ -23,4 +23,5 @@ if __name__ == "__main__":
         variant_id = filename.split('/')[-1].split('.')[0].split('_')[-1]
         data_list.append(data_dict[variant_id])
     dsdf_name = "separate_dsdfs/partial_dsdf_vim2_{}".format(job_index)
-    dsdf = DynaSigDF(sub_filenames_list, data_list, exp_labels, dsdf_name)
+    beta_values = [np.e ** (x / 2) for x in range(-6, 7)]
+    dsdf = DynaSigDF(sub_filenames_list, data_list, exp_labels, dsdf_name, beta_values=beta_values)
