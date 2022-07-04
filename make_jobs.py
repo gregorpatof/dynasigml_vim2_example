@@ -1,6 +1,7 @@
 import sys
 import os
 
+
 def make_job(filename, header_lines, index):
     with open(filename, "w") as f:
         f.write(''.join(header_lines) + " {}\n".format(index))
@@ -26,7 +27,7 @@ def make_all_jobs(jobs_dir):
         newlines.append(line)
     with open('{}/start_jobs.sh'.format(jobs_dir), 'w') as f:
         for i in range(20):
-            jobname = 'job_{}.sh'.format(jobs_dir, i)
+            jobname = 'job_{}.sh'.format(i)
             make_job('{}/{}'.format(jobs_dir, jobname), newlines, i)
             f.write('sbatch {}\n'.format(jobname))
 
