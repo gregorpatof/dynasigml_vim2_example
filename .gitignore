@@ -6,3 +6,7 @@ coefficients.pdb
 dsml_dynasig_only.pickle
 graphs_folder_dynasig_only
 predictions_double_mutants.df
+graphs_folder*
+dsml_dynasig_ddg.pickle
+dsml_static_only.pickle
+excl_make_all_graphs.py
